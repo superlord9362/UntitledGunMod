@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "superlord.powder_keg.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"refmap": "powder_keg.refmap.json",
+	"mixins": [
+		"PlayerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

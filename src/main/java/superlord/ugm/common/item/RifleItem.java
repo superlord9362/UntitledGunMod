@@ -39,6 +39,7 @@ public class RifleItem extends ProjectileWeaponItem implements Vanishable {
 				BulletItem bulletitem = (BulletItem)(itemstack.getItem() instanceof BulletItem ? itemstack.getItem() : UGMItems.BULLET.get());
 				AbstractBullet bullet = bulletitem.createBullet(world, itemstack, player);
 				bullet.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 3.0F, 1.0F);
+				bullet.setBaseDamage(5.0D);
 				world.addFreshEntity(bullet);
 				stack.hurtAndBreak(1, player, (p_40665_) -> {
 					p_40665_.broadcastBreakEvent(player.getUsedItemHand());

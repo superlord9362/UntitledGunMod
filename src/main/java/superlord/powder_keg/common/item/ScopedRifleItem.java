@@ -1,4 +1,4 @@
-package superlord.ugm.common.item;
+package superlord.powder_keg.common.item;
 
 import java.util.function.Predicate;
 
@@ -13,8 +13,8 @@ import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
-import superlord.ugm.common.entity.AbstractBullet;
-import superlord.ugm.registry.UGMItems;
+import superlord.powder_keg.common.entity.AbstractBullet;
+import superlord.powder_keg.registry.PowderKegItems;
 
 public class ScopedRifleItem extends ProjectileWeaponItem  {
 	public static final int USE_DURATION = 1200;
@@ -49,11 +49,11 @@ public class ScopedRifleItem extends ProjectileWeaponItem  {
 		ItemStack itemstack = player.getProjectile(stack);
 		if (!itemstack.isEmpty() || flag) {
 			if (itemstack.isEmpty()) {
-				itemstack = new ItemStack(UGMItems.BULLET.get());
+				itemstack = new ItemStack(PowderKegItems.BULLET.get());
 			}
 			boolean flag1 = player.getAbilities().instabuild;
 			if (!world.isClientSide) {
-				BulletItem bulletitem = (BulletItem)(itemstack.getItem() instanceof BulletItem ? itemstack.getItem() : UGMItems.BULLET.get());
+				BulletItem bulletitem = (BulletItem)(itemstack.getItem() instanceof BulletItem ? itemstack.getItem() : PowderKegItems.BULLET.get());
 				AbstractBullet bullet = bulletitem.createBullet(world, itemstack, player);
 				bullet.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 3.0F, 1.0F);
 				bullet.setBaseDamage(5.0D);
@@ -84,7 +84,7 @@ public class ScopedRifleItem extends ProjectileWeaponItem  {
 	}
 
 	public static final Predicate<ItemStack> BULLET_ONLY = (p_43017_) -> {
-		return p_43017_.is(UGMItems.BULLET.get());
+		return p_43017_.is(PowderKegItems.BULLET.get());
 	};
 
 }

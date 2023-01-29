@@ -1,24 +1,24 @@
 modLoader="javafml" #mandatory
-loaderVersion="[37,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 license="All rights reserved"
 [[mods]] #mandatory
-modId="ugm" #mandatory
+modId="powder_keg" #mandatory
 version="1.0.0" #mandatory
-displayName="Untitled Gun Mod" #mandatory
+displayName="Powder Keg" #mandatory
 credits="superlord9362 (code) and weastian (art)" #optional
 authors="superlord9362" #optional
 description='''
 A simple vanilla styled gun mod.
 '''
-[[dependencies.examplemod]] #optional
+[[dependencies.powder_keg]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[37,)" #mandatory
+    versionRange="[40,)" #mandatory
     ordering="NONE"
     side="BOTH"
-[[dependencies.examplemod]]
+[[dependencies.powder_keg]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.17.1,1.18)"
+	versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
